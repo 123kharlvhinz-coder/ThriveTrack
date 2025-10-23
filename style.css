@@ -1,0 +1,136 @@
+:root {
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --accent: #2563eb;
+    --muted: #6b7280;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Segoe UI, Roboto, Arial, sans-serif;
+    color: #111;
+    background: url(background.jpg) center/cover fixed no-repeat;
+}
+
+body::before {
+    height: auto;
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(80deg, rgba(255,255,255,0.2), rgba(255,255,255,0.4));
+    backdrop-filter: blur(2px);
+    z-index: -3;
+}
+
+.wrap {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+    padding: 32px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(16, 24, 40, 0.15);
+    backdrop-filter: blur(10px);
+    margin-right: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-size: 25px;
+}
+
+h1 strong {
+    font-weight: 700;
+    font-size: inherit;
+}
+
+h1 .highlight {
+    color: #dc2626;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+p.lead {
+    margin: 0 0 18px;
+    color: var(--muted);
+}
+
+form {
+    display: grid;
+    gap: 12px;
+}
+
+label {
+    font-size: 13px;
+    color: #111;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 24px);
+    padding: 10px 12px;
+    border: 1px solid #e6e9ef;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+button.primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+}
+
+a.link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.meta {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.msg {
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff6f6;
+    color: #9b1c1c;
+    border: 1px solid #ffdede;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 18px;
+        border-radius: 8px;
+    }
+}
